@@ -29,5 +29,25 @@ namespace MyVideoSite.Server.EncoderLib
             }
             return mediaItem;
         }
+
+        public void CreateAndExcuteEncodeJob(MediaItem mediaItem, string outputFolder)
+        {
+            try
+            {
+                using (Job job = new Job())
+                {
+                    job.MediaItems.Add(mediaItem);
+                    job.OutputDirectory = outputFolder;
+                    job.ApplyPreset(Presets.VC1IISSmoothStreamingSD480pVBR);
+
+                    job.Encode();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.ReportFromException(ex);
+                throw;
+            }
+        }
     }
 }
