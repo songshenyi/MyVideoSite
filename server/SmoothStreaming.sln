@@ -1,8 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncoderLib", "Encoder\EncoderLib\EncoderLib.csproj", "{94CBF594-5F39-4CD4-8907-63C3E5C986BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Diagnostics\LogEngine\Logger\Logger.csproj", "{7015346A-072B-48F2-B1B1-A4FE89A88B10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Diagnostics", "Diagnostics", "{A5615D8F-7858-4E81-B12A-5949B96BCE67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{4D4821CE-3730-4B10-82DC-2D90CD5CD8AD}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94CBF594-5F39-4CD4-8907-63C3E5C986BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CBF594-5F39-4CD4-8907-63C3E5C986BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CBF594-5F39-4CD4-8907-63C3E5C986BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CBF594-5F39-4CD4-8907-63C3E5C986BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7015346A-072B-48F2-B1B1-A4FE89A88B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7015346A-072B-48F2-B1B1-A4FE89A88B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7015346A-072B-48F2-B1B1-A4FE89A88B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7015346A-072B-48F2-B1B1-A4FE89A88B10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7015346A-072B-48F2-B1B1-A4FE89A88B10} = {A5615D8F-7858-4E81-B12A-5949B96BCE67}
+		{94CBF594-5F39-4CD4-8907-63C3E5C986BF} = {4D4821CE-3730-4B10-82DC-2D90CD5CD8AD}
 	EndGlobalSection
 EndGlobal
