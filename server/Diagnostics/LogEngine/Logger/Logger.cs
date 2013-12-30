@@ -17,5 +17,15 @@ namespace MyVideoSite.Diagnostics.LogEngine
         {
 
         }
+
+        public static void Report(string moduleName, string message)
+        {
+
+        }
+
+        public static void ReportFromException(string moduleName, Exception e)
+        {
+
+        }
     }
 }
