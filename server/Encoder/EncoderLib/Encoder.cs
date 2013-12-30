@@ -30,7 +30,7 @@ namespace MyVideoSite.Server.EncoderLib
             return mediaItem;
         }
 
-        public void CreateAndExcuteEncodeJob(MediaItem mediaItem, string outputFolder)
+        public string CreateAndExcuteEncodeJob(MediaItem mediaItem, string outputFolder)
         {
             try
             {
@@ -41,6 +41,7 @@ namespace MyVideoSite.Server.EncoderLib
                     job.ApplyPreset(Presets.VC1IISSmoothStreamingSD480pVBR);
 
                     job.Encode();
+                    return job.ActualOutputDirectory;
                 }
             }
             catch (Exception ex)

@@ -12,12 +12,11 @@ namespace MyVideoSite.Server.EncoderUnitTests
         [TestMethod]
         public void EncoderJobTest()
         {
-//            var x = System.Reflection.Assembly.GetExecutingAssembly().GetManifestResourceNames();
             string inputFileName = @"test.mp4";
             string outputFolder = System.IO.Directory.GetCurrentDirectory() + "\\Output";
             Encoder encoderJob = new Encoder();
             MediaItem mediaItem = encoderJob.CreateMediaItem(inputFileName);
-            encoderJob.CreateAndExcuteEncodeJob(mediaItem, outputFolder);
+            string actualOutputFolder = encoderJob.CreateAndExcuteEncodeJob(mediaItem, outputFolder);
         }
     }
 }
