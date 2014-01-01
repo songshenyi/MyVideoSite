@@ -71,9 +71,7 @@
       <Name>EncoderLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Output\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Data\test.mp4" />
   </ItemGroup>
